@@ -3,7 +3,6 @@
 // Utah/Newell Teapot demo
 
 if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-var examplepath = 'https://threejs.org/examples/';
 
 var camera, scene, renderer;
 var cameraControls;
@@ -28,7 +27,7 @@ var effectController = {
   lx: 0.32,
   ly: 0.39,
   lz: 0.7,
-  newTess: 15,
+  newTess: 40,
   bottom: true,
   lid: true,
   body: true,
@@ -133,25 +132,11 @@ function init() {
 
 function render() {
 
-	if ( effectController.newTess !== tess ||
-		effectController.bottom !== bBottom ||
-		effectController.lid !== bLid ||
-		effectController.body !== bBody ||
-		effectController.fitLid !== bFitLid ||
-		effectController.nonblinn !== bNonBlinn ||
-		effectController.newShading !== shading )
-	{
-  
-		tess = effectController.newTess;
-		bBottom = effectController.bottom;
-		bLid = effectController.lid;
-		bBody = effectController.body;
-		bFitLid = effectController.fitLid;
-		bNonBlinn = effectController.nonblinn;
+	if (	effectController.newShading !== shading ){
+    
 		shading = effectController.newShading;
-  
 		createNewTeapot();
-  
+    
 	}
 
 	// We're a bit lazy here. We could check to see if any material attributes changed and update

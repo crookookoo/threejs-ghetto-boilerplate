@@ -1,3 +1,14 @@
+// Some helper functions and variables
+
+// Add examplepath to all file paths in code that you copied from threejs.org/examples/
+var examplepath = 'https://threejs.org/examples/';
+
+// stats.js setup (don't forget to also update index.html)
+function setupStats(){
+  
+}
+
+// dat.gui setup
 function setupGui() {
 
 	var h;
