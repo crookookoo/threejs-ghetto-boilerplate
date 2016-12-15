@@ -21,15 +21,6 @@
 		"oAP": "\/index.html",
 		"oF": 0
 		},
-	"\/main-min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/main-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"\/main.js": {
 		"ft": 64,
 		"mi": 1,
