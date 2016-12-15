@@ -88,3 +88,23 @@ function updateScene(){
 
 }
 
+function setupGui() {
+
+	var gui = new dat.GUI();
+
+	var h = gui.addFolder( "Material control" );
+
+	h.add( effectController, "shininess", 1.0, 400.0, 1.0 ).name( "shininess" ).onChange( render );
+	h.add( effectController, "kd", 0.0, 1.0, 0.025 ).name( "diffuse strength" ).onChange( render );
+	h.add( effectController, "ks", 0.0, 1.0, 0.025 ).name( "specular strength" ).onChange( render );
+	h.add( effectController, "metallic" ).onChange( render );
+
+	h = gui.addFolder( "Material color" );
+
+	h.add( effectController, "hue", 0.0, 1.0, 0.025 ).name( "hue" ).onChange( render );
+	h.add( effectController, "saturation", 0.0, 1.0, 0.025 ).name( "saturation" ).onChange( render );
+	h.add( effectController, "lightness", 0.0, 1.0, 0.025 ).name( "lightness" ).onChange( render );
+
+}
+
+
